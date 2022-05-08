@@ -55,9 +55,9 @@ var sql2structCmd = &cobra.Command{
 
 func init() {
 	sqlCmd.AddCommand(sql2structCmd)
-	sql2structCmd.Flags().StringVarP(&username, "username", "", "", "请输入数据库的账号")
-	sql2structCmd.Flags().StringVarP(&password, "password", "", "", "请输入数据库的密码")
-	sql2structCmd.Flags().StringVarP(&host, "host", "", "", "请输入数据库的HOST")
+	sql2structCmd.Flags().StringVarP(&username, "username", "", "iam", "请输入数据库的账号")
+	sql2structCmd.Flags().StringVarP(&password, "password", "", "iam59!z$", "请输入数据库的密码")
+	sql2structCmd.Flags().StringVarP(&host, "host", "", "175.24.186.178:3306", "请输入数据库的HOST")
 	sql2structCmd.Flags().StringVarP(&charset, "charset", "", "utf8mb4", "请输入数据库的编码")
 	sql2structCmd.Flags().StringVarP(&dbType, "type", "", "mysql", "请输入数据库实例类型")
 	sql2structCmd.Flags().StringVarP(&dbName, "db", "", "", "请输入数据库名称")
@@ -65,4 +65,5 @@ func init() {
 
 }
 
-//  go run main.go sql struct --db=xxx --table=xxx
+//  go run main.go sql struct --db=blog_service --table=blog_article
+// ./tour/main sql struct --db=blog_service --table=blog_article
