@@ -11,6 +11,13 @@ App:
   LogSavePath: storage/logs
   LogFileName: app
   LogFileExt: .log
+  UploadSavePath: storage/uploads
+  UploadServerUrl: http://127.0.0.1:8000/static
+  UploadImageMaxSize: 5  # MB
+  UploadImageAllowExts:
+    - .jpg
+    - .jpeg
+    - .png
 ## 数据库配置
 Database:
   DBType: mysql
@@ -23,3 +30,7 @@ Database:
   ParseTime: True
   MaxIdleConns: 10
   MaxOpenConns: 30
+JWT:
+  Secret: xingxing  # 密钥
+  Issuer: blog-service  # 签发者
+  Expire: 7200 # 有效时间
