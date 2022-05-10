@@ -8,6 +8,7 @@ Server:
 App:
   DefaultPageSize: 10
   MaxPageSize: 100
+  DefaultContextTimeout: 20 # second
   LogSavePath: storage/logs
   LogFileName: app
   LogFileExt: .log
@@ -34,3 +35,12 @@ JWT:
   Secret: xingxing  # 密钥
   Issuer: blog-service  # 签发者
   Expire: 7200 # 有效时间
+Email:
+  Host: smtp.qq.com
+  Port: 465
+  UserName: 2391252119@qq.com
+  Password: jcjshfelhafoechh
+  IsSSL: true
+  From: 2391252119@qq.com
+  To:
+    - 18351252483@163.com
