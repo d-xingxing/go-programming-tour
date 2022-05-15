@@ -42,6 +42,7 @@ func NewRouter() *gin.Engine {
 	r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 	// 新增auth相关的路由
 	r.POST("/auth", api.GetAuth)
+	r.GET("/auth", api.GetAuth)
 
 	// 上传文件服务
 	upload := api.NewUpload()
